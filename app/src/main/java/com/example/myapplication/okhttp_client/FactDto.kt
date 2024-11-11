@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class FactDto(
   @SerializedName("_id")
-  val _id: String? = null,
+  val id: String? = null,
   @SerializedName("status")
   val status: Status? = null,
   @SerializedName("__v")
-  val __v: Int? = null,
+  val v: Int? = null,
   @SerializedName("type")
   val type: String? = null,
   @SerializedName("user")
