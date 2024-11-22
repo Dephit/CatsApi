@@ -1,14 +1,15 @@
 package com.example.myapplication.repositories
 
+import com.example.myapplication.okhttp_client.CatsApi
 import com.example.myapplication.okhttp_client.FactDto
-import com.example.myapplication.okhttp_client.RetrofitHolder
+import javax.inject.Inject
 
-class SomeRepository {
-
-  private val retrofitHolder = RetrofitHolder()
+class SomeRepository @Inject constructor(
+  private val catsApi: CatsApi
+) {
 
   suspend fun getFacts(): List<FactDto> {
-    return retrofitHolder.catsApi.getFacts()
+    return catsApi.getFacts()
   }
 
 }
